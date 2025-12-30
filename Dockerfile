@@ -25,6 +25,8 @@ EXPOSE 8080
 
 # Set environment variables
 ENV PORT=8080
+ENV STREAMLIT_SERVER_ENABLE_CORS=false
+ENV STREAMLIT_SERVER_ENABLE_XSRF_PROTECTION=false
 
-# Run Streamlit
-CMD streamlit run app.py --server.port=$PORT --server.address=0.0.0.0 --server.headless=true
+# Run Streamlit with longer timeout settings
+CMD streamlit run app.py --server.port=$PORT --server.address=0.0.0.0 --server.headless=true --server.enableWebsocketCompression=false --server.maxUploadSize=50
