@@ -1250,7 +1250,7 @@ def call_gemini(api_key, model_id, prompt, system_instruction=None, max_retries=
             
             payload = {
                 "contents": [{"role": "user", "parts": [{"text": prompt}]}],
-                "generationConfig": {"temperature": 0.4, "maxOutputTokens": 1024}
+                "generationConfig": {"temperature": 0.4, "maxOutputTokens": 2048}
             }
             
             if system_instruction:
@@ -1720,7 +1720,7 @@ def call_gemini_with_retry(api_key, model_id, prompt, system_instruction=None, m
             
             payload = {
                 "contents": [{"role": "user", "parts": [{"text": prompt}]}],
-                "generationConfig": {"temperature": 0.4, "maxOutputTokens": 1024}
+                "generationConfig": {"temperature": 0.4, "maxOutputTokens": 2048}
             }
             
             if system_instruction:
