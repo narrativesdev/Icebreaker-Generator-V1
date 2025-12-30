@@ -1,0 +1,12 @@
+.git
+.gitignore
+*.db
+.encryption_key
+venv/
+__pycache__/
+*.pyc
+app_v5.py
+app_v6.py
+app_v7.py
+Narratives App.app/
+.DS_Store
